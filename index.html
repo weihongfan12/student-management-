@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学生管理系统 — ElevenLabs Design</title>
+  <meta name="description" content="基于 ElevenLabs 设计语言构建的学生管理系统，支持学生档案、成绩管理与数据可视化">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components-new.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar"></nav>
+
+  <!-- Page: 学生管理 -->
+  <div id="pageStudents">
+    <main class="page-container">
+      <header class="page-header" id="pageHeader"></header>
+      <section class="controls-bar" id="controlsBar"></section>
+      <section class="student-list" id="studentList"></section>
+      <section class="empty-state" id="emptyState" style="display:none"></section>
+    </main>
+  </div>
+
+  <!-- Page: 成绩管理 -->
+  <div id="pageGrades" style="display:none">
+    <main class="page-container">
+      <header class="page-header">
+        <div class="page-header-eyebrow">GRADE MANAGEMENT</div>
+        <h1 class="page-header-title">成绩管理</h1>
+        <p class="page-header-desc">录入、查询和分析学生课程成绩 — 支持排名与统计</p>
+      </header>
+      <div id="pagGradesContent"></div>
+    </main>
+  </div>
+
+  <!-- Page: 数据总览 -->
+  <div id="pageDashboard" style="display:none">
+    <main class="page-container">
+      <header class="page-header">
+        <div class="page-header-eyebrow">DASHBOARD</div>
+        <h1 class="page-header-title">数据总览</h1>
+        <p class="page-header-desc">全局数据可视化 — 学生分布、成绩分析与操作记录</p>
+      </header>
+      <div id="pagDashboardContent"></div>
+    </main>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none"></div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app-core.js"></script>
+  <script src="js/app-grades.js"></script>
+  <script src="js/app-dashboard.js"></script>
+</body>
+</html>

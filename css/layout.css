@@ -1,0 +1,68 @@
+/* css/layout.css — 页面布局样式 */
+
+.page-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-24) var(--spacing-96);
+}
+
+/* ===== Student Grid ===== */
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: var(--spacing-16);
+}
+
+/* ===== Table View ===== */
+
+.student-table-wrapper {
+  background: var(--surface-card-white);
+  border-radius: var(--radius-cards);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.student-table-wrapper .data-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .page-header-title {
+    font-size: var(--text-heading-lg);
+    letter-spacing: var(--tracking-heading-lg);
+  }
+
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls-left,
+  .controls-right {
+    flex-wrap: wrap;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-panel-body {
+    grid-template-columns: 1fr;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .stats-row {
+    flex-wrap: wrap;
+  }
+}
